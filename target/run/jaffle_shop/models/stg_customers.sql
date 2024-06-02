@@ -4,7 +4,9 @@
 
         create or replace transient table analytics.dbt_wyang.stg_customers
          as
-        (select
+        (
+
+select
     id as customer_id,
     first_name,
     last_name
