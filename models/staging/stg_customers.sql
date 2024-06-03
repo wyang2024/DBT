@@ -1,6 +1,6 @@
 {{
     config(
-        materialized='table',
+        materialized='view',
         pre_hook='drop table if exists ANALYTICS.DBT_WYANG.TEMP_ORDERS',
         post_hook='create table ANALYTICS.DBT_WYANG.TEMP_ORDERS as select * from RAW.JAFFLE_SHOP.ORDERS'
     )
